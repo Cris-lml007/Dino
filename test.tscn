@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://7mt8mxku2sch"]
+
+[ext_resource type="PackedScene" uid="uid://c407y2n61ar5t" path="res://scenes/player.tscn" id="1_aotkg"]
+[ext_resource type="Texture2D" uid="uid://eixyded44cwx" path="res://assets/Tileset.png" id="1_jqvix"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w34q5"]
+texture = ExtResource("1_jqvix")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_gjf1n"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_w34q5")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_gjf1n")
+format = 2
+layer_0/tile_data = PackedInt32Array(1310724, 0, 0, 1310725, 0, 0, 1310726, 0, 0, 1310727, 0, 0, 1310728, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0, 1310732, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1310738, 0, 0, 1310739, 0, 0, 1310740, 0, 0, 1310741, 0, 0, 1310742, 0, 0, 1310743, 0, 0, 1310744, 0, 0, 1310745, 0, 0, 1310746, 0, 0, 1310747, 0, 0, 1310748, 0, 0, 1310749, 0, 0)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_aotkg")]
+position = Vector2(165, 288)
+onGravity = true
